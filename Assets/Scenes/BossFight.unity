@@ -511,7 +511,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -880,7 +880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20da143f4e7c94145ab4102157e49e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Managers.LevelManager
-  levelTimerSeconds: 2
+  levelTimerSeconds: 60
   timerBuffer: 0
 --- !u!1 &604884741
 GameObject:
@@ -1672,7 +1672,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -93377,7 +93377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1525911484435712128, guid: 5af98592ebbffc94aadb2d92fba47620, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -8.86
       objectReference: {fileID: 0}
     - target: {fileID: 1525911484435712128, guid: 5af98592ebbffc94aadb2d92fba47620, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93463,7 +93463,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1129723434}
@@ -93516,7 +93516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c4922ff1974c46b861fcdb1f9af60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerResources
-  blood: 2000
+  blood: 0
   bones: 0
 --- !u!1 &1475153203
 GameObject:
@@ -93630,6 +93630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529026615}
   - component: {fileID: 1529026616}
+  - component: {fileID: 1529026617}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -93709,6 +93710,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1529026617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529026614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c502ee837843cbb24cd8476a166411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ui.Display.DisplayHealth
 --- !u!1 &1650200936
 GameObject:
   m_ObjectHideFlags: 0
@@ -93789,7 +93802,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -94078,7 +94091,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

@@ -13,19 +13,20 @@ namespace Ui.Display
 
         private void Awake()
         {
-            healthSlider = GetComponentInChildren<Slider>();
+            healthSlider = GetComponent<Slider>();
         }
 
         private void Start()
         {
+            UpdateSlider();
             GameEventManager.Instance.uiEvents.UpdateHealth += GetDisplayValue;
-            GameEventManager.Instance.sceneEvents.SceneLoaded += UpdateSlider;
         }
 
         protected override void GetDisplayValue(int amount)
         {
             base.GetDisplayValue(amount);
             healthSlider.value = amount;
+            UpdateSlider();
         }
 
         private void UpdateSlider()

@@ -46,20 +46,14 @@ public class PlayerController : MonoBehaviour
     {
         GameEventManager.Instance.inputEvents.MovePressed += UpdatePlayerMoveDirection;
         GameEventManager.Instance.inputEvents.AttackPressed += Attack;
+        GameEventManager.Instance.levelEvents.LevelTimerFinished += DisableControlsOnLevelTimerEnd;
+        GameEventManager.Instance.sceneEvents.SceneLoaded += EnableControlsOnSceneChanged;
         
         invincibleTime = PlayerStatManager.Instance.invincibilityTimer;
         movementSpeed = PlayerStatManager.Instance.speed;
         attackRate = PlayerStatManager.Instance.fireRate;
         
         invincibleTimeBuffer = invincibleTime;
-    }
-
-    private void OnEnable()
-    {
-        // GameEventManager.Instance.inputEvents.MovePressed += UpdatePlayerMoveDirection;
-        // GameEventManager.Instance.inputEvents.AttackPressed += Attack;
-        GameEventManager.Instance.levelEvents.LevelTimerFinished += DisableControlsOnLevelTimerEnd;
-        GameEventManager.Instance.sceneEvents.SceneLoaded += EnableControlsOnSceneChanged;
     }
 
     private void OnDisable()
