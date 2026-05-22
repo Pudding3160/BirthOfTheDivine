@@ -15176,7 +15176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20da143f4e7c94145ab4102157e49e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Managers.LevelManager
-  levelTimerSeconds: 60
+  levelTimerSeconds: 2
   timerBuffer: 0
 --- !u!1 &604884741
 GameObject:
@@ -16038,7 +16038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c4922ff1974c46b861fcdb1f9af60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerResources
-  blood: 0
+  blood: 2000
   bones: 0
 --- !u!1 &1475153203
 GameObject:
@@ -16390,7 +16390,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8454615503619093319, guid: 65e763dea052c4101921b86f5694e971, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 891620519}
   m_SourcePrefab: {fileID: 100100000, guid: 65e763dea052c4101921b86f5694e971, type: 3}
 --- !u!1001 &4298535895606904307
