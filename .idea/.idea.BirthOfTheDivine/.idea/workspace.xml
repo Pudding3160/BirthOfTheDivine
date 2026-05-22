@@ -11,15 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e0cac96-2487-4b35-980b-ba7b67a5de78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BirthOfTheDivine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BirthOfTheDivine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemySpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemySpawner.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Melee Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Melee Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Ranged Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy_Ranged Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerBullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Day1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Day1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nina.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nina.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/playerWStaff.ase.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/playerWStaff.ase.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SheepScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SheepScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/BulletSpeedUpgrade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/BulletSpeedUpgrade.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/DamageUpgrade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/DamageUpgrade.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/FireRateUpgrade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/FireRateUpgrade.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/HeflUpgrade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/HeflUpgrade.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/InvincibilityUpgrade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/InvincibilityUpgrade.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/SpeedUpgrade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Upgrades/SpeedUpgrade.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +72,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "upgrades",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -152,6 +159,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" containingFunctionPresentation="Method 'OnEnable'">
+            <startOffsets>
+              <option value="1633" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1695" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
