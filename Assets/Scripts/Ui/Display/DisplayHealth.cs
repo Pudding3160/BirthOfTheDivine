@@ -1,9 +1,8 @@
-using System;
+
 using Components.HealthComponent;
 using Events;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 namespace Ui.Display
 {
@@ -32,7 +31,7 @@ namespace Ui.Display
         private void UpdateSlider()
         {
             var player = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthComponent>();
-            healthSlider.highValue = player.GetMaxHealth();
+            healthSlider.maxValue = player.GetMaxHealth();
             healthSlider.value = player.GetCurrentHealth();
         }
     }
