@@ -129,11 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5155224175731214776, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.78433
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5155224175731214776, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.4039288
+      value: -38.4
       objectReference: {fileID: 0}
     - target: {fileID: 5155224175731214776, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -170,6 +170,10 @@ PrefabInstance:
     - target: {fileID: 5257037249349022840, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
       propertyPath: m_Name
       value: EnemySpawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7931558913918727489, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
+      propertyPath: spawnRadius
+      value: 21.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -880,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20da143f4e7c94145ab4102157e49e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Managers.LevelManager
-  levelTimerSeconds: 60
+  levelTimerSeconds: 10
   timerBuffer: 0
 --- !u!1 &604884741
 GameObject:
@@ -93371,6 +93375,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 733353437310473173, guid: 5af98592ebbffc94aadb2d92fba47620, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1525911484435712128, guid: 5af98592ebbffc94aadb2d92fba47620, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -93518,6 +93526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerResources
   blood: 0
   bones: 0
+  requiredBlood: 0
+  currentOfferedBlood: 0
 --- !u!1 &1475153203
 GameObject:
   m_ObjectHideFlags: 0
@@ -115817,11 +115827,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5155224175731214776, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.72842
+      value: -63.5
       objectReference: {fileID: 0}
     - target: {fileID: 5155224175731214776, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16452
+      value: -14.6
       objectReference: {fileID: 0}
     - target: {fileID: 5155224175731214776, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -115859,14 +115869,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 7931558913918727489, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
-      propertyPath: 'enemies.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8829717583327408463, guid: cd1da5ef42930244e998350d60c5e491, type: 3}
-    - target: {fileID: 7931558913918727489, guid: 7f0a5cd7c097e4c95b540c6f63c58bbb, type: 3}
-      propertyPath: 'enemies.Array.data[1]'
-      value: 
-      objectReference: {fileID: 6863119813516123727, guid: 4c1576bf78f1b1f498d95bdf0981761b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

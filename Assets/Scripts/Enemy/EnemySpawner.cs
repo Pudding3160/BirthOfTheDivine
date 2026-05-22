@@ -35,5 +35,11 @@ namespace Enemy
                 transform.position.z), 
                 Quaternion.identity);
         }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, spawnRadius);
+        }
     }
 }

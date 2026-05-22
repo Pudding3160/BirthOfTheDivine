@@ -31,6 +31,7 @@ namespace Ui.Display
         private void UpdateSlider()
         {
             var player = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthComponent>();
+            if (!healthSlider) return;
             healthSlider.maxValue = player.GetMaxHealth();
             healthSlider.value = player.GetCurrentHealth();
         }

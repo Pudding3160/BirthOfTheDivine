@@ -11,11 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e0cac96-2487-4b35-980b-ba7b67a5de78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/UpgradeEvents.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Events/UpgradeEvents.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BirthOfTheDivine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BirthOfTheDivine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemySpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemySpawner.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VFXtest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VFXtest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossFight.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossFight.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SheepScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SheepScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Events/ResourceEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Events/ResourceEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoToNextLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoToNextLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ResourceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pentagram/Pentagram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pentagram/Fire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pentagram/Pentagram.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pentagram/Fire.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/Display/DisplayHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/Display/DisplayHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/FadeTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/FadeTransition.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnablePlayerControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/UIEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Events/UpgradeEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/KeepManagersLoaded.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/PlayerStatManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,7 +73,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "ovcice-place",
+    "git-widget-placeholder": "global-blood-counter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1779362596202</updated>
       <workItem from="1779362597248" duration="19615000" />
-      <workItem from="1779483468024" duration="360000" />
+      <workItem from="1779483468024" duration="5035000" />
     </task>
     <servers />
   </component>

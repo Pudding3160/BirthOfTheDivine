@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Pentagram
 {
-    public class Pentagram : MonoBehaviour
+    public class Fire : MonoBehaviour
     {
         private Collider2D detectionArea;
         [SerializeField]

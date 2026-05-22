@@ -8,8 +8,11 @@ namespace Managers
     {
         [SerializeField] private int blood;
         [SerializeField] private int bones;
-        
-        private void OnEnable()
+        [SerializeField] private int requiredBlood;
+        [SerializeField] private int currentOfferedBlood;
+        private int level;
+
+        private void Start()
         {
             GameEventManager.Instance.resourceEvents.RewardBlood += AddBlood;
             GameEventManager.Instance.resourceEvents.RewardBones += AddBones;
@@ -17,16 +20,7 @@ namespace Managers
             GameEventManager.Instance.resourceEvents.TakeBones += TakeBones;
             GameEventManager.Instance.resourceEvents.GetBlood += GetBlood;
             GameEventManager.Instance.resourceEvents.GetBones += GetBones;
-        }
-
-        private void OnDisable()
-        {
-            GameEventManager.Instance.resourceEvents.RewardBlood -= AddBlood;
-            GameEventManager.Instance.resourceEvents.RewardBones -= AddBones;
-            GameEventManager.Instance.resourceEvents.TakeBlood -= TakeBlood;
-            GameEventManager.Instance.resourceEvents.TakeBones -= TakeBones;
-            GameEventManager.Instance.resourceEvents.GetBlood -= GetBlood;
-            GameEventManager.Instance.resourceEvents.GetBones -= GetBones;
+            GameEventManager.Instance.resourceEvents.OfferBlood += OfferBlood;
         }
 
         #region Reward
@@ -57,6 +51,17 @@ namespace Managers
         private void TakeBones(int amount)
         {
             bones -= amount;
+        }
+
+        private void OfferBlood(int amount)
+        {
+            var offeredBlood = 0;
+            offeredBlood = blood > amount ? amount : blood;
+            
+            currentOfferedBlood += offeredBlood;
+            level++;
+            GameEventManager.Instance.resourceEvents.OnTakeBlood(offeredBlood);
+            GameEventManager.Instance.resourceEvents.OnTakeBlood(offeredBlood);
         }
 
         #endregion

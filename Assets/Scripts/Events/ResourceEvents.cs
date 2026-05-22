@@ -34,6 +34,12 @@ namespace Events
         {
             TakeBones?.Invoke(amount);
         }
+        
+        public event Action<int> OfferBlood;
+        public virtual void OnOfferBlood(int obj)
+        {
+            OfferBlood?.Invoke(obj);
+        }
 
         #endregion
 
@@ -52,5 +58,6 @@ namespace Events
         }
 
         #endregion
+
     }
 }

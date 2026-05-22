@@ -47,7 +47,7 @@ public class FadeTransition : MonoBehaviour
             _color.a = Mathf.Lerp(_color.a, 0, Time.deltaTime * _fadeTime * (_fadeTime - _color.a / 10));
             _image.color = _color;
         }
-        // GameEventManager.Instance.sceneEvents.OnChangeScene(_newSceneName);
+        GameEventManager.Instance.sceneEvents.OnChangeScene(_newSceneName);
     }
 
     private void FadeOut()
