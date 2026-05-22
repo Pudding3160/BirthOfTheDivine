@@ -34,12 +34,15 @@ public class PlayerController : MonoBehaviour
     private float lastDashTime;
     private bool isDashing;
 
+    private TrailRenderer dashTrail;
 
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         bulletPooling = GetComponent<BulletPooling>();
         DontDestroyOnLoad(this);
+        dashTrail=GetComponent<TrailRenderer>();    
     }
 
     private void Start()
@@ -68,6 +71,11 @@ public class PlayerController : MonoBehaviour
         GameEventManager.Instance.inputEvents.AttackPressed -= Attack;
         GameEventManager.Instance.levelEvents.LevelTimerFinished -= DisableControlsOnLevelTimerEnd;
         GameEventManager.Instance.sceneEvents.SceneLoaded -= EnableControlsOnSceneChanged;
+        if (dashTrail != null)
+        {
+            dashTrail.Clear();
+        }
+
     }
 
     private void FixedUpdate()
@@ -94,6 +102,7 @@ public class PlayerController : MonoBehaviour
             if (Time.time >= lastDashTime + dashCooldown)
             {
                 StartCoroutine(Dash());
+                StartCoroutine(DashTrailCrt()); 
             }
         }
 
@@ -141,10 +150,26 @@ public class PlayerController : MonoBehaviour
         Debug.Log("skibidi"); 
         transform.position = new Vector3(0, 0, transform.position.z);
     }
+    IEnumerator DashTrailCrt()
+    {
+        
+        dashTrail.enabled = true;
+        float elapsed = 0f;
 
+        while (elapsed < dashDuration)
+        {
+            elapsed += Time.fixedDeltaTime;
+
+            
+            yield return new WaitForSeconds(0.25f);
+        }
+        dashTrail.enabled = false;
+       
+    }
     IEnumerator Dash()
     {
         isDashing = true;
+        
         lastDashTime = Time.time;
 
         Vector2 inputDir = new Vector2(
@@ -165,7 +190,7 @@ public class PlayerController : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
-
+        
         isDashing = false;
     }
 }
