@@ -41,8 +41,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bulletPooling = GetComponent<BulletPooling>();
-        DontDestroyOnLoad(this);
         dashTrail=GetComponent<TrailRenderer>();    
+        DontDestroyOnLoad(this);
     }
 
     private void Start()
@@ -65,10 +65,7 @@ public class PlayerController : MonoBehaviour
         GameEventManager.Instance.inputEvents.AttackPressed -= Attack;
         GameEventManager.Instance.levelEvents.LevelTimerFinished -= DisableControlsOnLevelTimerEnd;
         GameEventManager.Instance.sceneEvents.SceneLoaded -= EnableControlsOnSceneChanged;
-        if (dashTrail != null)
-        {
-            dashTrail.Clear();
-        }
+        if (dashTrail) dashTrail.Clear();
 
     }
 
@@ -125,7 +122,7 @@ public class PlayerController : MonoBehaviour
         // Failsafe
         if (!bullet) return;
         bullet.Initialize(transform.position, shootDirection);
-        GetComponent<ParticleThingo>().SpawnParticle();
+        GetComponent<ParticleThingo>()?.SpawnParticle();
         attackRateBuffer = attackRate;
     }
 
@@ -141,14 +138,12 @@ public class PlayerController : MonoBehaviour
     {
         GameEventManager.Instance.inputEvents.MovePressed += UpdatePlayerMoveDirection;
         GameEventManager.Instance.inputEvents.AttackPressed += Attack;
-        Debug.Log("skibidi"); 
         transform.position = new Vector3(0, 0, transform.position.z);
     }
     IEnumerator DashTrailCrt()
     {
-        
-        dashTrail.enabled = true;
-        float elapsed = 0f;
+        if (dashTrail) dashTrail.enabled = true;
+        var elapsed = 0f;
 
         while (elapsed < dashDuration)
         {
@@ -157,7 +152,7 @@ public class PlayerController : MonoBehaviour
             
             yield return new WaitForSeconds(0.25f);
         }
-        dashTrail.enabled = false;
+        if (dashTrail) dashTrail.enabled = false;
        
     }
     IEnumerator Dash()
@@ -166,7 +161,7 @@ public class PlayerController : MonoBehaviour
         
         lastDashTime = Time.time;
 
-        Vector2 inputDir = new Vector2(
+        var inputDir = new Vector2(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")
         ).normalized;
@@ -174,13 +169,13 @@ public class PlayerController : MonoBehaviour
         if (inputDir == Vector2.zero)
             inputDir = moveDirection;
 
-        float elapsed = 0f;
+        var elapsed = 0f;
 
         while (elapsed < dashDuration)
         {
             elapsed += Time.fixedDeltaTime;
 
-            rb.MovePosition(rb.position + inputDir * dashSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + inputDir * (dashSpeed * Time.fixedDeltaTime));
 
             yield return new WaitForFixedUpdate();
         }
