@@ -35,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -912089723
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1823384711897739383, guid: 6c5a1681fd44c4b0a9a438b4bba43067, type: 3}
@@ -170,7 +170,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16666667, y: 0.16666667}
   m_EdgeRadius: 0
 --- !u!114 &7250896279803098721
 MonoBehaviour:
@@ -207,7 +207,7 @@ MonoBehaviour:
   _currentHealth: 5
   _maxHealth: 5
   isDead: 0
-  animator: {fileID: 0}
+  animator: {fileID: 7414211071524622406}
 --- !u!114 &2759699302233630212
 MonoBehaviour:
   m_ObjectHideFlags: 0
