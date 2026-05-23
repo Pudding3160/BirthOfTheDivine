@@ -8,6 +8,7 @@ namespace Ui.Display
 {
     public class DisplayHealth : DisplayStat
     {
+        [SerializeField]
         private Slider healthSlider;
 
         private void Awake()
@@ -24,7 +25,7 @@ namespace Ui.Display
         protected override void GetDisplayValue(int amount)
         {
             base.GetDisplayValue(amount);
-            healthSlider.value = amount;
+            if (healthSlider) healthSlider.value = amount;
             UpdateSlider();
         }
 

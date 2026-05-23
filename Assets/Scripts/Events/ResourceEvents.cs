@@ -59,5 +59,10 @@ namespace Events
 
         #endregion
 
+        public event Action UnlockNextLevel;
+        public virtual void OnUnlockNextLevel()
+        {
+            UnlockNextLevel?.Invoke();
+        }
     }
 }

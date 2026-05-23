@@ -36,6 +36,7 @@ namespace Components
         {
             if (_currentHealth > 0) return;
             transform.position = Vector2.zero;
+            _currentHealth = _maxHealth;
         }
 
         public override void TakeDamage(int amount)

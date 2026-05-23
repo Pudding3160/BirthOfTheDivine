@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2559418113719442590}
   - component: {fileID: 6044117351299580899}
   - component: {fileID: 4305082521611847360}
+  - component: {fileID: -8296138335263064166}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -308,3 +309,16 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &-8296138335263064166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320471372504008307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37eea9f70b4d4c2eaf13ae0fde343d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemyBullet
+  damage: 0

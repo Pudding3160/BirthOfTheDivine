@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Enemy;
 
 public class EnemyController : MonoBehaviour
 {
@@ -37,7 +38,8 @@ public class EnemyController : MonoBehaviour
     public float detectionRadius = 8f;
 
     [Header("Melee Settings")]
-    public float meleeAttackRange = 1.5f;
+    public float meleeAttackRange = 2f;
+    public int rangedDamage;
 
     [Header("Ranged Settings")]
     public float preferredDistance = 8f;
@@ -186,6 +188,8 @@ public class EnemyController : MonoBehaviour
             Quaternion.identity
         );
 
+        var bul = projectile.GetComponent<EnemyBullet>();
+        bul.damage = rangedDamage;
         projectile.transform.localScale = Vector3.one * 2.5f;
 
         Rigidbody2D projectileRb =
@@ -275,7 +279,7 @@ public class EnemyController : MonoBehaviour
     {
         if (isChargingAttack) return;
 
-        if (projectilePrefab == null || firePoint == null)
+        if (!projectilePrefab || !firePoint)
             return;
 
         GameObject projectile = Instantiate(
@@ -284,6 +288,8 @@ public class EnemyController : MonoBehaviour
             Quaternion.identity
         );
 
+        var bul = projectile.GetComponent<EnemyBullet>();
+        bul.damage = rangedDamage;
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
 
         if (projectileRb != null)
