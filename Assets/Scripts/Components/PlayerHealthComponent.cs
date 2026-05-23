@@ -35,7 +35,7 @@ namespace Components
         public override void Die()
         {
             if (_currentHealth > 0) return;
-            _sr.color = Color.red;
+            transform.position = Vector2.zero;
         }
 
         public override void TakeDamage(int amount)
