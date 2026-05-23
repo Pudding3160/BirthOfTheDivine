@@ -8,8 +8,7 @@ public class HeGo : MonoBehaviour
 
     private void Start()
     {
-        if (rb == null)
-            rb = GetComponent<Rigidbody2D>();
+        if (!rb) rb = GetComponent<Rigidbody2D>();
 
         StartCoroutine(HeDecide());
     }
@@ -20,10 +19,10 @@ public class HeGo : MonoBehaviour
         {
             HeHalt();
 
-            float waitTime = Random.Range(1f, 4f);
+            var waitTime = Random.Range(1f, 4f);
             yield return new WaitForSeconds(waitTime);
 
-            Vector2 dir = new Vector2(
+            var dir = new Vector2(
                 Random.Range(-1f, 1f),
                 Random.Range(-1f, 1f)
             ).normalized;
@@ -39,11 +38,11 @@ public class HeGo : MonoBehaviour
 
     private System.Collections.IEnumerator HeMove(Vector2 targetDir)
     {
-        Vector2 startVel = rb.linearVelocity;
-        Vector2 targetVel = targetDir * moveSpeed;
+        var startVel = rb.linearVelocity;
+        var targetVel = targetDir * moveSpeed;
 
-        float t = 0f;
-        float duration = 0.3f;
+        var t = 0f;
+        const float duration = 0.3f;
 
         while (t < duration)
         {

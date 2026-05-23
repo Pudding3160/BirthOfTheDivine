@@ -1,7 +1,9 @@
 
 using System;
 using JetBrains.Annotations;
+using Managers;
 using UnityEngine;
+using SceneManager = UnityEngine.SceneManagement.SceneManager;
 
 namespace Ui
 {
@@ -11,6 +13,7 @@ namespace Ui
         [SerializeField] [CanBeNull] private GameObject nextText;
         [SerializeField] private float timer;
         private float timerBuffer;
+        [SerializeField] private string sceneName;
 
         private void Start()
         {
@@ -23,8 +26,9 @@ namespace Ui
 
             if (timerBuffer > 0) return;
             
-            nextText?.SetActive(true);
+            if (nextText) nextText.SetActive(true);
             gameObject.SetActive(false);
+            if (sceneName != "") SceneManager.LoadScene(sceneName);
         }
     }
 }

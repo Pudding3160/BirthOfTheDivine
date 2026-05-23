@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 1534992595}
   timer: 3
+  sceneName: 
 --- !u!114 &567345693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 1496835613}
   timer: 3
+  sceneName: 
 --- !u!114 &571498035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 1101483876}
   timer: 3
+  sceneName: 
 --- !u!114 &905551327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,6 +781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 0}
   timer: 3
+  sceneName: GameSceneField1
 --- !u!114 &1101483879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 567345690}
   timer: 3
+  sceneName: 
 --- !u!114 &1194331958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,6 +1095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 1743857723}
   timer: 3
+  sceneName: 
 --- !u!114 &1302590641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,6 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 1672690890}
   timer: 3
+  sceneName: 
 --- !u!114 &1496835616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1479,6 +1486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 571498032}
   timer: 3
+  sceneName: 
 --- !u!114 &1534992598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1635,6 +1643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 905551324}
   timer: 3
+  sceneName: 
 --- !u!114 &1672690893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1790,6 +1799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 1302590638}
   timer: 1
+  sceneName: 
 --- !u!1 &1743857723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ui.ChangeExpositionText
   nextText: {fileID: 1194331955}
   timer: 3
+  sceneName: 
 --- !u!114 &1743857726
 MonoBehaviour:
   m_ObjectHideFlags: 0
