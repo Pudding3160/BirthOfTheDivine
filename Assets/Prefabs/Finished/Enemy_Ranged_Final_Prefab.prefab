@@ -73,6 +73,14 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4352363133631227277, guid: 4c1576bf78f1b1f498d95bdf0981761b, type: 3}
+      propertyPath: rangedDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352363133631227277, guid: 4c1576bf78f1b1f498d95bdf0981761b, type: 3}
+      propertyPath: meleeAttackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352363133631227277, guid: 4c1576bf78f1b1f498d95bdf0981761b, type: 3}
       propertyPath: chargedAttackCooldown
       value: 10
       objectReference: {fileID: 0}

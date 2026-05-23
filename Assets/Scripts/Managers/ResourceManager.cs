@@ -6,11 +6,22 @@ namespace Managers
 {
     public class ResourceManager : MonoBehaviour
     {
-        [SerializeField] private int blood;
-        [SerializeField] private int bones;
-        [SerializeField] private int requiredBlood;
-        [SerializeField] private int currentOfferedBlood;
-        private int level;
+        [SerializeField] public int blood;
+        [SerializeField] public int bones;
+        [SerializeField] public int requiredBlood;
+        [SerializeField] public int currentOfferedBlood;
+        public int level;
+        public static ResourceManager Instance;
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Debug.LogWarning("Multiple instances of your mom detected! hahahahhaaaaaaaaaaaaa i want to cry.......");
+                Destroy(gameObject);
+            }
+            Instance = this;
+        }
 
         private void Start()
         {
@@ -59,9 +70,13 @@ namespace Managers
             offeredBlood = blood > amount ? amount : blood;
             
             currentOfferedBlood += offeredBlood;
+            GameEventManager.Instance.resourceEvents.OnTakeBlood(offeredBlood);
+            if (level != 3)
+            {
+                GameEventManager.Instance.resourceEvents.OnUnlockNextLevel();
+                return;
+            }
             level++;
-            GameEventManager.Instance.resourceEvents.OnTakeBlood(offeredBlood);
-            GameEventManager.Instance.resourceEvents.OnTakeBlood(offeredBlood);
         }
 
         #endregion

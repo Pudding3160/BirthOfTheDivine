@@ -13,6 +13,7 @@ namespace Events
         public ResourceEvents resourceEvents;
         public LevelEvents levelEvents;
         public PlayerStatEvents playerStatEvents;
+        public MiscEvents miscEvents;
 
         private void Awake()
         {
@@ -31,6 +32,7 @@ namespace Events
             resourceEvents = new ResourceEvents();
             levelEvents = new LevelEvents();
             playerStatEvents = new PlayerStatEvents();
+            miscEvents = new MiscEvents();
         }
     }
 }

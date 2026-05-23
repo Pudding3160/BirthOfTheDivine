@@ -19,10 +19,10 @@ namespace Pentagram
 
         private void Start()
         {
-            GameEventManager.Instance.resourceEvents.OfferBlood += AllowUpgrades;
+            GameEventManager.Instance.resourceEvents.UnlockNextLevel += AllowUpgrades;
         }
 
-        private void AllowUpgrades(int obj)
+        private void AllowUpgrades()
         {
             hasOfferedBlood = true;
         }

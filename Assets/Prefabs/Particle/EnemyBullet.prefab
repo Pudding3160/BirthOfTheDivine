@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 2559418113719442590}
   - component: {fileID: 6874143338171964716}
   - component: {fileID: 8879168705092965266}
+  - component: {fileID: -5844642780182255563}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -167,7 +168,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1941544153
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -376905732474766964, guid: acdfaade3b870f04e82a1c3472bd5d58, type: 3}
@@ -393,3 +394,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5844642780182255563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320471372504008307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37eea9f70b4d4c2eaf13ae0fde343d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemyBullet
+  damage: 0

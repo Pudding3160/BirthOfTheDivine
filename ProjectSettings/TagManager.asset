@@ -8,6 +8,7 @@ TagManager:
   - PlayerBulletPooler
   - Orb
   - Boss
+  - Sheep
   layers:
   - Default
   - TransparentFX
