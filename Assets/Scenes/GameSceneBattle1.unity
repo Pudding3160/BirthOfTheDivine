@@ -230,7 +230,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4761014196894925808, guid: b7b6187a90f224e1a93a343478b31704, type: 3}
       propertyPath: levelTimeSeconds
-      value: 10
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5002370384607670665, guid: b7b6187a90f224e1a93a343478b31704, type: 3}
       propertyPath: m_LocalPosition.x
