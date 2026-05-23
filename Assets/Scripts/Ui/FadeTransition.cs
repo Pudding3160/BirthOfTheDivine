@@ -26,7 +26,7 @@ public class FadeTransition : MonoBehaviour
         GameEventManager.Instance.levelEvents.LevelTimerFinished -= FadeIn;
     }
 
-    void Start()
+    private void Start()
     {
         GameEventManager.Instance.levelEvents.LevelTimerFinished += FadeIn;
         if (_color.a == 0) return;

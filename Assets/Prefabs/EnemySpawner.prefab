@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy.EnemySpawner
   spawnDelay: 4
   enemies:
-  - {fileID: 8829717583327408463, guid: cd1da5ef42930244e998350d60c5e491, type: 3}
-  - {fileID: 6863119813516123727, guid: 4c1576bf78f1b1f498d95bdf0981761b, type: 3}
+  - {fileID: 8569877166406616896, guid: 60c48dabac1eb8d43ad2f473005581d7, type: 3}
+  - {fileID: 679756681713450455, guid: cee162a044caa4149b038b691d875230, type: 3}
   spawnRadius: 12

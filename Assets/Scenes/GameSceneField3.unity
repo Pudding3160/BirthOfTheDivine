@@ -5015,7 +5015,6 @@ GameObject:
   - component: {fileID: 482567109}
   - component: {fileID: 482567108}
   - component: {fileID: 482567107}
-  - component: {fileID: 482567106}
   - component: {fileID: 482567111}
   m_Layer: 0
   m_Name: Fire
@@ -5024,18 +5023,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &482567106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482567105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0795086e6b7a44ce9588d569060f2b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnablePlayerControls
 --- !u!114 &482567107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22988,6 +22975,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4761014196894925808, guid: b7b6187a90f224e1a93a343478b31704, type: 3}
+      propertyPath: levelTimeSeconds
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 5002370384607670665, guid: b7b6187a90f224e1a93a343478b31704, type: 3}
       propertyPath: m_LocalPosition.x
       value: 711.4172

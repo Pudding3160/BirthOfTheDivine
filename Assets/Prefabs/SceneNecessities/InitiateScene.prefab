@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0795086e6b7a44ce9588d569060f2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnablePlayerControls
+  levelTimeSeconds: 180

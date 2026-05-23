@@ -12,11 +12,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0e0cac96-2487-4b35-980b-ba7b67a5de78" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BirthOfTheDivine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BirthOfTheDivine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemyBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemyBullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneNecessities/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneNecessities/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EnemySpawner.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EnemySpawner.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SceneNecessities/InitiateScene.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SceneNecessities/InitiateScene.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSceneBattle1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSceneBattle1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSceneField1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSceneField1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nina.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nina.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSceneField2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSceneField2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSceneField3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSceneField3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameSceneField4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameSceneField4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnablePlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnablePlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/FadeTransition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/FadeTransition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +126,7 @@
       <updated>1779362596202</updated>
       <workItem from="1779362597248" duration="19615000" />
       <workItem from="1779483468024" duration="5035000" />
-      <workItem from="1779515634919" duration="958000" />
+      <workItem from="1779515634919" duration="2119000" />
     </task>
     <servers />
   </component>
