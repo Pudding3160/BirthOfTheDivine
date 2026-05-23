@@ -13,7 +13,8 @@ namespace Managers
 
         private void Start()
         {
-            GameEventManager.Instance.levelEvents.LevelTimerFinished += () => Debug.Log("Level Timer Finished");
+            // GameEventManager.Instance.levelEvents.LevelTimerFinished += () => Debug.Log("Level Timer Finished");
+            
             
             timerBuffer = levelTimerSeconds;
         }
@@ -29,5 +30,7 @@ namespace Managers
             GameEventManager.Instance.levelEvents.OnLevelTimerFinished();
             _finishedLevel = true;
         }
+        
+        
     }
 }

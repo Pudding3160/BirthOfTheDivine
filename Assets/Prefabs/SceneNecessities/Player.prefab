@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2480954510764009609}
   - component: {fileID: 2759699302233630212}
   - component: {fileID: 7711597156337381871}
+  - component: {fileID: 7414211071524622406}
   - component: {fileID: 2364653243648615222}
   m_Layer: 0
   m_Name: Player
@@ -205,6 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthComponent
   _currentHealth: 5
   _maxHealth: 5
+  isDead: 0
+  animator: {fileID: 0}
 --- !u!114 &2759699302233630212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +279,28 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+--- !u!95 &7414211071524622406
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015896035047130742}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1beedfcd0b0af9f44a0f944415b00f5a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!96 &2364653243648615222
 TrailRenderer:
   serializedVersion: 4
