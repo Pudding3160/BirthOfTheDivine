@@ -1,3 +1,4 @@
+using Components;
 using Components.HealthComponent;
 using UnityEngine;
 using UnityEngine.VFX;
@@ -74,6 +75,12 @@ namespace Bullets
         {
             // Failsafes
             if (objectToTargetTag == "") return;
+            if (other.CompareTag("Sheep"))
+            {
+                other.TryGetComponent(typeof(SheepHealthComponent), out var sheepHealthComponent);
+                Hit((SheepHealthComponent)sheepHealthComponent);
+                return;
+            }
             if (!other.CompareTag(objectToTargetTag)) return;
             other.TryGetComponent(typeof(HealthComponent), out var healthComponent);
             Hit((HealthComponent)healthComponent);

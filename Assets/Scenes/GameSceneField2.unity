@@ -5056,8 +5056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c635ffae4a0e04b97834c5405195fa10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pentagram.Pentagram
-  upgradeCanvas: {fileID: 0}
-  hasOfferedBlood: 1
+  upgradeCanvas: {fileID: 627779714}
+  hasOfferedBlood: 0
 --- !u!58 &482567108
 CircleCollider2D:
   m_ObjectHideFlags: 0

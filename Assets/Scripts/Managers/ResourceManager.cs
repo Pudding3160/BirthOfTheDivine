@@ -70,9 +70,13 @@ namespace Managers
             offeredBlood = blood > amount ? amount : blood;
             
             currentOfferedBlood += offeredBlood;
-            level++;
             GameEventManager.Instance.resourceEvents.OnTakeBlood(offeredBlood);
-            if (level != 3) GameEventManager.Instance.resourceEvents.OnUnlockNextLevel();
+            if (level != 3)
+            {
+                GameEventManager.Instance.resourceEvents.OnUnlockNextLevel();
+                return;
+            }
+            level++;
         }
 
         #endregion

@@ -25,6 +25,7 @@ namespace Managers
                                    ResourceManager.Instance.currentOfferedBlood;
                 GameEventManager.Instance.miscEvents.OnActivateSheep();
                 t.TryGetComponent(out SheepHealthComponent sheepController);
+                if (!sheepController) return;
                 sheepController.blood = (int)Mathf.Ceil(missingBlood / 5) + 1;
             }
         }
