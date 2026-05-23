@@ -6,6 +6,9 @@ public class BossRangedAI : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    private Animator animator;
+    private bool isDead;
+
     [Header("References")]
     public Transform player;
     public GameObject projectilePrefab;
@@ -45,6 +48,7 @@ public class BossRangedAI : MonoBehaviour
     public GameObject orbitPrefab;
     public int orbitCount = 5;
     public float radius = 2.5f;
+    private float currentRadius;
     public float orbitSpeed = 2f;
 
     [Header("Burst Orbit Mode")]
@@ -68,17 +72,26 @@ public class BossRangedAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
         SpawnOrbs();
+        currentRadius = radius;
     }
 
     void Update()
     {
+
         if (player == null) return;
 
         Vector2 targetDir =
             (player.position - firePoint.position).normalized;
 
-        smoothedDirection = Vector2.Lerp(smoothedDirection, targetDir, Time.deltaTime * (aimSmoothSpeed * 0.5f));
+        smoothedDirection =
+            Vector2.Lerp(
+                smoothedDirection,
+                targetDir,
+                Time.deltaTime * (aimSmoothSpeed * 0.5f)
+            );
 
         if (orbs.Count == 0) return;
 
@@ -88,8 +101,11 @@ public class BossRangedAI : MonoBehaviour
             lastBurstTime = Time.time;
         }
 
-        float currentRadius = isBursting ? burstRadius : radius;
+        float targetRadius = isBursting ? burstRadius : radius;
         float currentSpeed = isBursting ? burstOrbitSpeed : orbitSpeed;
+
+        currentRadius =
+            Mathf.Lerp(currentRadius, targetRadius, Time.deltaTime * 5f);
 
         float direction = rotateClockwise ? -1f : 1f;
 
@@ -243,12 +259,19 @@ public class BossRangedAI : MonoBehaviour
 
             proj.transform.rotation =
                 Quaternion.Euler(0, 0, finalAngle);
+
+            animator.SetBool("is_idle", true);
         }
     }
 
     // ================= CONE =================
     IEnumerator ConeAttack()
     {
+        if (isDead) yield break;
+
+        animator.SetBool("is_idle", false);
+        //animator.SetTrigger("Cast");
+
         yield return new WaitForSeconds(0.4f);
 
         Vector2 baseDir =
@@ -263,11 +286,17 @@ public class BossRangedAI : MonoBehaviour
 
             SpawnProjectile(dir);
         }
+
+        animator.SetBool("is_idle_anim", true);
     }
 
     // ================= 360 BURST =================
     IEnumerator Burst360Attack()
     {
+        if (isDead) yield break;
+
+        //animator.SetTrigger("Cast");
+
         yield return new WaitForSeconds(0.5f);
 
         int bullets = 8;

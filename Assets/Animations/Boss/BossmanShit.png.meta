@@ -1,0 +1,521 @@
+fileFormatVersion: 2
+guid: 94eed88d9938ebf41800768d6bf1e31c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7161235991453442694
+    second: BossmanShit_0
+  - first:
+      213: 1612845222866487638
+    second: BossmanShit_1
+  - first:
+      213: -5597641828805319128
+    second: BossmanShit_2
+  - first:
+      213: 5159327911057031210
+    second: BossmanShit_3
+  - first:
+      213: -6562339595957488166
+    second: BossmanShit_4
+  - first:
+      213: -3410893216950494485
+    second: BossmanShit_5
+  - first:
+      213: 7522577477749176569
+    second: BossmanShit_6
+  - first:
+      213: -2703330117714293994
+    second: BossmanShit_7
+  - first:
+      213: 796006998300693381
+    second: BossmanShit_8
+  - first:
+      213: 5210237459346965728
+    second: BossmanShit_9
+  - first:
+      213: 5224920561445935568
+    second: BossmanShit_10
+  - first:
+      213: -6301430619725500204
+    second: BossmanShit_11
+  - first:
+      213: 6064681764492575643
+    second: BossmanShit_12
+  - first:
+      213: 1154608324420252687
+    second: BossmanShit_13
+  - first:
+      213: -6987531560521881379
+    second: BossmanShit_14
+  - first:
+      213: -4496020919556370194
+    second: BossmanShit_15
+  - first:
+      213: -7523572817108821898
+    second: BossmanShit_16
+  - first:
+      213: 7443384162152831081
+    second: BossmanShit_17
+  - first:
+      213: 6050264381698781385
+    second: BossmanShit_18
+  - first:
+      213: 932408541426942563
+    second: BossmanShit_19
+  - first:
+      213: -5869566369933689494
+    second: BossmanShit_20
+  - first:
+      213: 8030924569536790247
+    second: BossmanShit_21
+  - first:
+      213: 7535511086530513219
+    second: BossmanShit_22
+  - first:
+      213: -633628133209681337
+    second: BossmanShit_23
+  - first:
+      213: -5952930996760376652
+    second: BossmanShit_24
+  - first:
+      213: 3300391348995539518
+    second: BossmanShit_25
+  - first:
+      213: -2886050797534115629
+    second: BossmanShit_26
+  - first:
+      213: -1186774883050994212
+    second: BossmanShit_27
+  - first:
+      213: 2633665691066735029
+    second: BossmanShit_28
+  - first:
+      213: 9056663851502521871
+    second: BossmanShit_29
+  - first:
+      213: 3623948371862563580
+    second: BossmanShit_30
+  - first:
+      213: 6803713540539708819
+    second: BossmanShit_31
+  - first:
+      213: 1138027618474022741
+    second: BossmanShit_32
+  - first:
+      213: -7702325950157176195
+    second: BossmanShit_33
+  - first:
+      213: 5615832795697232618
+    second: BossmanShit_34
+  - first:
+      213: -380702950931925920
+    second: BossmanShit_35
+  - first:
+      213: 379234498725253160
+    second: BossmanShit_36
+  - first:
+      213: 5837222461685442821
+    second: BossmanShit_37
+  - first:
+      213: 7530043494268666215
+    second: BossmanShit_38
+  - first:
+      213: 5518445031668201
+    second: BossmanShit_39
+  - first:
+      213: 8523438948724624045
+    second: BossmanShit_40
+  - first:
+      213: 3814190450070779767
+    second: BossmanShit_41
+  - first:
+      213: -7820876220684149702
+    second: BossmanShit_42
+  - first:
+      213: -258132188428132816
+    second: BossmanShit_43
+  - first:
+      213: -7596364998385006886
+    second: BossmanShit_44
+  - first:
+      213: 47677615786050298
+    second: BossmanShit_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BossmanShit_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ddca0cecd2e9c90800000000000000
+      internalID: -7161235991453442694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65984aa5f2af16610800000000000000
+      internalID: 1612845222866487638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 1
+        width: 67
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826e03e0a6e2152b0800000000000000
+      internalID: -5597641828805319128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 81
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20005a566d999740800000000000000
+      internalID: 5159327911057031210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_4
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad5397ff7e2ede4a0800000000000000
+      internalID: -6562339595957488166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_5
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 7
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea50ecd0b21aa0d0800000000000000
+      internalID: -3410893216950494485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_6
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 12
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8f7941c50956860800000000000000
+      internalID: 7522577477749176569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_7
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 15
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b460fa497db7ad0800000000000000
+      internalID: -2703330117714293994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_8
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 23
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5831074c52cfb0b00800000000000000
+      internalID: 796006998300693381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossmanShit_9
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 30
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e44fcf3d5b7e4840800000000000000
+      internalID: 5210237459346965728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0fec58245f253684c8d6a80c6c727f9f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BossmanShit_0: -7161235991453442694
+      BossmanShit_1: 1612845222866487638
+      BossmanShit_10: 5224920561445935568
+      BossmanShit_11: -6301430619725500204
+      BossmanShit_12: 6064681764492575643
+      BossmanShit_13: 1154608324420252687
+      BossmanShit_14: -6987531560521881379
+      BossmanShit_15: -4496020919556370194
+      BossmanShit_16: -7523572817108821898
+      BossmanShit_17: 7443384162152831081
+      BossmanShit_18: 6050264381698781385
+      BossmanShit_19: 932408541426942563
+      BossmanShit_2: -5597641828805319128
+      BossmanShit_20: -5869566369933689494
+      BossmanShit_21: 8030924569536790247
+      BossmanShit_22: 7535511086530513219
+      BossmanShit_23: -633628133209681337
+      BossmanShit_24: -5952930996760376652
+      BossmanShit_25: 3300391348995539518
+      BossmanShit_26: -2886050797534115629
+      BossmanShit_27: -1186774883050994212
+      BossmanShit_28: 2633665691066735029
+      BossmanShit_29: 9056663851502521871
+      BossmanShit_3: 5159327911057031210
+      BossmanShit_30: 3623948371862563580
+      BossmanShit_31: 6803713540539708819
+      BossmanShit_32: 1138027618474022741
+      BossmanShit_33: -7702325950157176195
+      BossmanShit_34: 5615832795697232618
+      BossmanShit_35: -380702950931925920
+      BossmanShit_36: 379234498725253160
+      BossmanShit_37: 5837222461685442821
+      BossmanShit_38: 7530043494268666215
+      BossmanShit_39: 5518445031668201
+      BossmanShit_4: -6562339595957488166
+      BossmanShit_40: 8523438948724624045
+      BossmanShit_41: 3814190450070779767
+      BossmanShit_42: -7820876220684149702
+      BossmanShit_43: -258132188428132816
+      BossmanShit_44: -7596364998385006886
+      BossmanShit_45: 47677615786050298
+      BossmanShit_5: -3410893216950494485
+      BossmanShit_6: 7522577477749176569
+      BossmanShit_7: -2703330117714293994
+      BossmanShit_8: 796006998300693381
+      BossmanShit_9: 5210237459346965728
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

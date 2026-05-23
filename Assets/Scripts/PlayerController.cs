@@ -10,6 +10,9 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator animator;
+    private SpriteRenderer sr;
+
     [SerializeField]
     private BulletPooling bulletPooling;
     public float movementSpeed;
@@ -41,18 +44,22 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bulletPooling = GetComponent<BulletPooling>();
+        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         dashTrail=GetComponent<TrailRenderer>();    
         DontDestroyOnLoad(this);
     }
 
     private void Start()
     {
+        animator = GetComponent<Animator>(); 
+
         GameEventManager.Instance.inputEvents.MovePressed += UpdatePlayerMoveDirection;
         GameEventManager.Instance.inputEvents.AttackPressed += Attack;
         GameEventManager.Instance.levelEvents.LevelTimerFinished += DisableControlsOnLevelTimerEnd;
         GameEventManager.Instance.sceneEvents.SceneLoaded += EnableControlsOnSceneChanged;
         
-        invincibleTime = PlayerStatManager.Instance.invincibilityTimer;
+        //invincibleTime = PlayerStatManager.Instance.invincibilityTimer;
         movementSpeed = PlayerStatManager.Instance.speed;
         attackRate = PlayerStatManager.Instance.fireRate;
         
@@ -88,6 +95,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        UpdateAnimations();
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (Time.time >= lastDashTime + dashCooldown)
@@ -149,12 +158,24 @@ public class PlayerController : MonoBehaviour
         {
             elapsed += Time.fixedDeltaTime;
 
-            
             yield return new WaitForSeconds(0.25f);
         }
         if (dashTrail) dashTrail.enabled = false;
        
     }
+    
+    private void UpdateAnimations()
+    {
+        var speed = moveDirection.magnitude;
+
+        animator.SetFloat("MoveX", moveDirection.x);
+        animator.SetFloat("MoveY", moveDirection.y);
+        animator.SetFloat("Speed", speed);
+
+        if (speed < 0.1f)
+            animator.SetFloat("Speed", 0);
+    }
+
     IEnumerator Dash()
     {
         isDashing = true;

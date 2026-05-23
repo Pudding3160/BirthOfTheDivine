@@ -6,6 +6,11 @@ public class EnemyMeleeAttack : MonoBehaviour
     public Transform player;
     private Rigidbody2D rb;
 
+    private Animator animator;
+    private const string IS_IDLE = "is_idle";
+    private const string IS_WALKING = "is_walking_anim";
+    private const string IS_ATTACKING = "is_attacking_anim";
+
     [Header("Movement")]
     public float walkSpeed = 2f;
     public float runSpeed = 10f;
@@ -26,6 +31,7 @@ public class EnemyMeleeAttack : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         if (player == null)
         {
@@ -58,8 +64,12 @@ public class EnemyMeleeAttack : MonoBehaviour
 
     IEnumerator DoAttackDecision()
     {
+        if (isAttacking)
+            yield break;
+
         isAttacking = true;
         rb.linearVelocity = Vector2.zero;
+
 
         float dist = Vector2.Distance(transform.position, player.position);
 
@@ -70,7 +80,6 @@ public class EnemyMeleeAttack : MonoBehaviour
             else
                 yield return StartCoroutine(DashSlashThrough());
         }
-
         else if (dist > 4f)
         {
             if (Random.value > 0.5f)
@@ -78,19 +87,17 @@ public class EnemyMeleeAttack : MonoBehaviour
             else
                 yield return StartCoroutine(RunChargeHeavy());
         }
-
         else if (dist > 2f)
         {
             yield return StartCoroutine(ChargeDashHeavy());
         }
-
-        else if (dist > 1f)
+        else
         {
             yield return StartCoroutine(SmallWalkAttack());
         }
 
         lastAttackTime = Time.time;
-        isAttacking = false;
+
     }
 
     // 1. charge -> dash -> heavy attack
@@ -99,7 +106,14 @@ public class EnemyMeleeAttack : MonoBehaviour
         isAttacking = true;
         rb.linearVelocity = Vector2.zero;
 
+        animator.SetBool(IS_WALKING, false);
+
+        animator.SetTrigger("ChargeAttack");
+
         yield return new WaitForSeconds(1f);
+
+
+        animator.SetBool(IS_WALKING, true);
 
         Vector2 dir = (player.position - transform.position).normalized;
 
@@ -113,22 +127,16 @@ public class EnemyMeleeAttack : MonoBehaviour
         while (t < 1f)
         {
             t += Time.deltaTime / dashTime;
-
-            transform.position =
-                Vector2.Lerp(startPos, targetPos, t);
-
+            transform.position = Vector2.Lerp(startPos, targetPos, t);
             yield return null;
         }
 
         rb.linearVelocity = Vector2.zero;
 
-        HeavyAttack();
+        yield return new WaitForSeconds(0.5f);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
-        rb.linearVelocity = Vector2.zero;
-
-        yield return new WaitForSeconds(0.2f);
         isAttacking = false;
     }
 
@@ -137,6 +145,9 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         isAttacking = true;
         slashAttack = true;
+
+        animator.SetBool(IS_WALKING, false);
+        animator.SetTrigger("ChargeAttack");
 
         Vector2 dir = (player.position - transform.position).normalized;
 
@@ -158,7 +169,12 @@ public class EnemyMeleeAttack : MonoBehaviour
         }
 
         rb.linearVelocity = Vector2.zero;
-        SlashAttack();
+
+        animator.SetTrigger("HeavyHit");
+
+        yield return new WaitForSeconds(0.15f);
+
+        animator.SetBool(IS_WALKING, true);
 
         slashAttack = false;
         isAttacking = false;
@@ -169,19 +185,38 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         isAttacking = true;
 
-        while (Vector2.Distance(transform.position, player.position) > attackRange)
-        {
-            Vector2 dir = (player.position - transform.position).normalized;
-            rb.linearVelocity = dir * walkSpeed;
+        rb.linearVelocity = Vector2.zero;
+        animator.SetBool(IS_WALKING, false);
 
-            yield return null;
+        yield return new WaitForSeconds(0.15f);
+
+        animator.SetTrigger("Attack");
+
+        yield return null;
+
+        float initialDist = Vector2.Distance(transform.position, player.position);
+
+        bool shouldChase = initialDist > attackRange;
+
+        if (shouldChase)
+        {
+            while (isAttacking)
+            {
+                float dist = Vector2.Distance(transform.position, player.position);
+
+                if (dist <= attackRange)
+                    break;
+
+                Vector2 dir = (player.position - transform.position).normalized;
+                rb.linearVelocity = dir * walkSpeed;
+
+                yield return null;
+            }
         }
 
         rb.linearVelocity = Vector2.zero;
-        yield return new WaitForSeconds(0.1f);
 
-        SmallAttack();
-
+        yield return new WaitForSeconds(0.4f);
         isAttacking = false;
     }
 
@@ -191,11 +226,14 @@ public class EnemyMeleeAttack : MonoBehaviour
         isAttacking = true;
         slashAttack = true;
 
+
         Vector2 targetPos = player.position;
 
         float stopDistance = 0.5f;
 
         float sprintSpeed = 14f;
+
+        animator.SetBool(IS_WALKING, true);
 
         while (Vector2.Distance(transform.position, targetPos) > stopDistance)
         {
@@ -213,9 +251,14 @@ public class EnemyMeleeAttack : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
+        animator.SetBool(IS_WALKING, false);
+        animator.SetTrigger("ChargeAttack");
+
         rb.linearVelocity = Vector2.zero;
 
         yield return new WaitForSeconds(0.5f);
+
+        animator.SetTrigger("HeavyHit");
 
         Vector2 attackDir =
             (player.position - transform.position).normalized;
@@ -226,8 +269,7 @@ public class EnemyMeleeAttack : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
 
-        // 4. ATTACK IMPACT
-        RunHeavyAttack();
+        animator.SetBool(IS_WALKING, true);
 
         yield return new WaitForSeconds(0.6f);
 
@@ -240,9 +282,12 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         isAttacking = true;
 
+        animator.SetBool(IS_WALKING, false);
+        animator.SetTrigger("ChargeAttack");
+
         rb.linearVelocity = Vector2.zero;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
 
         float duration = 0.6f;
         float t = 0f;
@@ -268,37 +313,11 @@ public class EnemyMeleeAttack : MonoBehaviour
         transform.position = player.position;
         jumpAttack = true;
 
-        AOEAttack(player.position);
-
         yield return new WaitForSeconds(0.4f);
+
+        animator.SetBool(IS_WALKING, true);
 
         jumpAttack = false;
         isAttacking = false;
-    }
-
-
-    void SmallAttack()
-    {
-        Debug.Log("Small Attack");
-    }
-
-    void HeavyAttack()
-    {
-        Debug.Log("Charge-Dash-Heavy Attack");
-    }
-
-    void RunHeavyAttack()
-    {
-        Debug.Log("Run-Heavy Attack");
-    }
-
-    void SlashAttack()
-    {
-        Debug.Log("Slash Through Attack");
-    }
-
-    void AOEAttack(Vector2 pos)
-    {
-        Debug.Log("AOE at " + pos);
     }
 }
